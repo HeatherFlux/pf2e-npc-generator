@@ -71,7 +71,20 @@ pub fn get_styles() -> Style {
             font-family: 'IM Fell English', serif;
             margin-bottom: 30px;
             position: relative;
-            z-index: 1;
+            padding-bottom: 15px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='10' viewBox='0 0 100 10'%3E%3Cpath fill='none' stroke='%231c2c1f' stroke-width='1' d='M0,5 C25,0 75,10 100,5 M20,5 C40,0 60,10 80,5'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-size: 100px 10px;
+            pointer-events: none;
         }
 
         .form-group {
